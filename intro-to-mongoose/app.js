@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 async function conntentToDB(){
     try{
-        await mongoose.connect('mongodb+srv://omar:1234@omar-cluster.dbwrx.mongodb.net/ga?appName=omar-cluster')
+        // /database_name?
+        await mongoose.connect('mongodb+srv://omar:1234@omar-cluster.dbwrx.mongodb.net/school?appName=omar-cluster')
         console.log('Connection Successful')
     }
     catch(err){
@@ -10,3 +11,14 @@ async function conntentToDB(){
     }
 }
 conntentToDB()
+
+
+// Schema
+const studentSchema = new mongoose.Schema({
+   name: String,
+   grade: Number 
+})
+
+// model
+const Student = mongoose.model('Student',studentSchema)
+
