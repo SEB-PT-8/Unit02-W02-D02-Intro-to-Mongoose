@@ -26,9 +26,9 @@
   * `"Connected to database!"` on success.
   * `"Connection failed."` on error.
 
-#### 3. Model Definition (in `models/Recipe.js`)
+#### 3. Model Definition
 
-Create a model folder and create a Recipe.js file inside. create the model with the following fields:
+Create a model in app.js. create the model with the following fields:
 | Field        | Type      | Constraints                                            |
 |--------------|-----------|--------------------------------------------------------|
 | name         | String    | Required                                               |
