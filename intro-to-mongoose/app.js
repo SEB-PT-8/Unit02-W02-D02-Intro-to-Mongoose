@@ -22,3 +22,30 @@ const studentSchema = new mongoose.Schema({
 // model
 const Student = mongoose.model('Student',studentSchema)
 
+
+// Create in DB
+async function createStudent(){
+    // model.create({}): adds a document to the db
+    const createdStudent = await Student.create({
+        name: 'Hasan',
+        grade: 99
+    })
+}
+// createStudent()
+
+
+// Getting values from database
+
+async function getAllStudents(){
+    const allStudents = await Student.find()
+    console.log(allStudents)
+}
+
+// getAllStudents()
+
+
+async function getOneStudent(){
+    const foundStudent = await Student.findOne({name:'Mohammad'})
+    console.log(foundStudent)
+}
+getOneStudent()
